@@ -24,6 +24,8 @@ public class Sesion_12_agosto {
         System.out.println(f2);
         Foco f3=new Foco("Boch","Cristal", "led", true, 60.0f);
         System.out.println(f3);
+        String nombre="Marco Giovanni Guerrero Lopez";
+        System.out.println(nombre.charAt(6));
     }
     
 }

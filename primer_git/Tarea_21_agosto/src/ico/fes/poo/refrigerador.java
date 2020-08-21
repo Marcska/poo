@@ -18,22 +18,22 @@ public class refrigerador extends electrodomesticos{
     public refrigerador() {
     }
 
-    public refrigerador(String capacidad, String modelo, String color, int puertas, float restante) {
+    public refrigerador(String capacidad, String modelo, String color, int puertas) {
         this.capacidad = capacidad;
         this.modelo = modelo;
         this.color = color;
         this.puertas = puertas;
-        this.restante = restante;
     }
 
-    public refrigerador(String capacidad, String modelo, String color, int puertas, float restante, String fabricante, String material, String descripcion, String pais_fabricante) {
+    public refrigerador(String capacidad, String modelo, String color, int puertas, String fabricante, String material, String descripcion, String pais_fabricante) {
         super(fabricante, material, descripcion, pais_fabricante);
         this.capacidad = capacidad;
         this.modelo = modelo;
         this.color = color;
         this.puertas = puertas;
-        this.restante = restante;
     }
+
+
 
 
 
@@ -78,10 +78,10 @@ public class refrigerador extends electrodomesticos{
     public void ingresar_productos(float resta){
         restante=Float.parseFloat(capacidad)-resta;
         if(restante==0){
-            System.out.println("Ya no entran mas productos en el refrigerador");
+            System.out.println("La capacidad es de " + capacidad + " la cantidad de productos faltantes es de " + restante );
         }
         else{
-            System.out.println("Aun queda espacio en el refrigerador");
+            System.out.println("Aun queda espacio en el refrigerador " + restante);
         }
     }
     
@@ -92,8 +92,10 @@ public class refrigerador extends electrodomesticos{
 
     @Override
     public String toString() {
-        return "refrigerador{" + "capacidad=" + capacidad + ", modelo=" + modelo + ", color=" + color + ", puertas=" + puertas + ", restante=" + restante + '}';
+        return "refrigerador{" + "capacidad=" + capacidad + ", modelo=" + modelo + ", color=" + color + ", puertas=" + puertas + ", restante=" + restante + '}' + super.toString();
     }
+
+    
 
 
     

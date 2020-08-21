@@ -6,6 +6,8 @@
 package tarea_21_agosto;
 
 import ico.fes.poo.electrodomesticos;
+import ico.fes.poo.licuadora;
+import ico.fes.poo.refrigerador;
 
 /**
  *
@@ -20,7 +22,14 @@ public class Tarea_21_agosto {
         electrodomesticos elc1 = new electrodomesticos("Mabe", "acero", "Es un refrigerador industrial ", "CHINA");
         System.out.println(elc1);
         elc1.usar();
-        // TODO code application logic here
+        refrigerador rfg1 = new refrigerador("14", "RF221NCTASL/IBACCI", "Acero", 3, "SAMSUNG", "METAL", 
+                "Con el refrigerador Samsung 22 pies cúbicos acero RF221NCTASL/IBACCI tendrás 3 puertas para que sea más fácil y práctica su utilización", "TAIWAN");
+        System.out.println(rfg1);
+        rfg1.ingresar_productos(13.14f);
+        licuadora lc1 = new licuadora(1.25f, 550, 14, "negro", "t-fal", "cristal templado y metal", 
+                "Licuadora Infinyforce 14 negra: ¡3 veces más eficiente para resultados perfectos!", "CHINA");
+        lc1.licuar(13);
+        lc1.perfil_licuar(0);
     }
     
 }
